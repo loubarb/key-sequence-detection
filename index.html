@@ -7,6 +7,25 @@
 </head>
 <body>
 <script>
+  const pressed = [];
+  const secretCode = 'presto';
+
+  window.addEventListener('keyup', (e) => {
+    // pushes/adds users key input into array
+    pressed.push(e.key);
+    // -secretCode.length - 1 starts checking users inputs array from the BACK to the front
+    // trims length of array - length of secretCode to keep array at a set length;
+      // total length of array from users input depends on length of secretCode
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+    console.log(pressed);
+
+    // .join('') turns array into string
+    if (pressed.join('').includes(secretCode)) {
+      console.log('yay');
+      cornify_add();
+    }
+
+  })
 </script>
 </body>
 </html>
