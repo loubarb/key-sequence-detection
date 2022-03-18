@@ -12,7 +12,7 @@
 
   window.addEventListener('keyup', (e) => {
     // pushes/adds users key input into array
-    pressed.push(e.key);
+    pressed.push(e.key.toLowerCase());
     // -secretCode.length - 1 starts checking users inputs array from the BACK to the front
     // trims length of array - length of secretCode to keep array at a set length;
       // total length of array from users input depends on length of secretCode
